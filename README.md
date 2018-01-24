@@ -13,7 +13,9 @@ type esc to exit
 This class is awesome!
 type ':w'- write file
 type ':q' - quit
-or combine with ':wq
-:qw
-:qw
+or combine with ':wq'
+git commit message "This commit will _______" 
+use action verb 
+short one liner
+*include some git command to reference later
 
