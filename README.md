@@ -1,4 +1,5 @@
 
+
 # Software_Spring18
 BME 590 Spring 2018
 i
@@ -18,4 +19,5 @@ git commit message "This commit will _______"
 use action verb 
 short one liner
 *include some git command to reference later
+git commit -am --> add and commit the file to one who's already under version control
 
