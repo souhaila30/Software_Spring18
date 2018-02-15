@@ -1,0 +1,42 @@
+import pytest
+import math 
+
+def test_sum_list():
+	from assignment4_5 import sum_list
+	sum_ = sum_list([10,20,30.1])
+	assert sum_ == 60.1
+
+def test_min():
+	from assignment4_5 import find_min_max
+	max_ = find_min_max([4,7,-20])
+	assert min_[0] == -20 
+
+def test_max():
+	from assignment4_5 import find_min_max
+	max_ = find_min_max([101,34,-202920])
+	assert max_[1] == 101
+
+def test_precision():
+	from assignment4_5 import find_min_max
+	max_ = find_min_max([1.33,0, -222])
+	assert max_ == (-222,1.33)
+
+def test_tuple_size():
+	from assignment4_5 import find_min_max
+	min_max = find_min_max([23,53,345,-903])
+	assert len(min,max) ==2 
+
+def test_try_exception_type():
+	from assignment4_5 import find_exceptions
+	with pytest.raises(TypeError):
+		find_exceptions(['a',7,-20])
+
+def test_try_excpetion_import():
+	from assignment4_5 import find_exceptions
+	with pytest.raises(ImportError):
+		import ThisisNotAFile
+
+def test_try_exception_value():
+	from assignment4_5 import find_exceptions
+	with pytest.raises(ValueError):
+		find_exceptions([math.sqrt(-102903),3453,-1002])
