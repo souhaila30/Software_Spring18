@@ -1,0 +1,71 @@
+import numpy as np
+import logging
+
+logging.basicConfig(filename = 'logging.txt', format = '%(asctime)s %(message)s'
+
+def sum_list(num_list):
+	"""fxn takes a list of numbers and returns the sum
+
+	:param num_list: list of integers
+	:returns sum_list: one integer
+
+	"""
+
+	sum_list=sum(num_list)
+	return sum_list
+
+def find_min_max(num_list):
+	"""Fxn takes list of integers and returns min and max in tuple
+
+	:param num_list: list of integers
+	:returns max_min: a tuple containing the max and min of a list
+
+	"""
+
+	min_=np.min(num_list)
+	max_=np.max(num_list)
+	max_min=(max_,min_)
+	
+	return max_min
+
+def max_diff(num_list):
+	"""fxn takes a list of integers and returns the max difference between adjacent numbers
+
+	:param num_list: list of integers
+	: returns max_diff: maximum difference
+	
+	"""
+
+	diff = np.diff(num_list)
+	max_diff=diff.max()
+
+	return max_diff
+
+def find_exceptions(num_list):
+	"""fxn checks and raises appropriate excpetions: type, value and import
+
+	:param num_list: list of integers
+	:raises TypeError: checks to make sure list is integers
+	:raises ImportError: checks to make sure correct files are imported
+	:raises ValueError: make sure the integers have real values
+
+	"""
+
+	try:
+		find_min_max([num_list])
+		max_diff([num_list])
+		sum_list([num_list])
+	except TypeError:
+		logging.debug('Debug:try checking the data type of num_list')
+		logging.warning('WARNING: Your program may blow up from the wrong data')
+		raise TypeError
+
+	except ImportError:
+		logging.debug('DEBUG: Error in input files')
+		logging.warning('WARNING: You have tried to import something that DNE')
+	
+	except ValueError:
+		logging.debug('DEBUG: there is a value error, make sure the integer is real')
+		logging.warning('WARNING: there is a value error, make sure the integer is real')
+		raise ValueError
+
