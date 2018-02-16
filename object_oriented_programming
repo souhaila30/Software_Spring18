@@ -1,0 +1,8 @@
+class Student:	# pep8 rules 
+   
+  def __init__(self,name='Souhaila',age=24): # self is a place holder name for the object you create later
+      #object has attributes(piece of data) 
+      self.name = name 
+      self.age = age
+
+
